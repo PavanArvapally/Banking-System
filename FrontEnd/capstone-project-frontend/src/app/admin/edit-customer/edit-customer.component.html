@@ -1,0 +1,68 @@
+<app-nav-bar> </app-nav-bar>
+
+<div class="row justify-content-center">
+  <div class="card col-md-4 col-sm-4 mt-5 mr-auto ml-auto border-0">
+    <div class="card-body">
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-sm-6 mr-auto ml-auto">
+          <label for="staticEmail" class="col-sm-6 col-form-label"
+            >Customer Id</label
+          >
+        </div>
+        <div class="col-md-6 col-sm-6 mr-auto ml-auto">
+          <input
+            type="number"
+            class="form-control"
+            id="id"
+            [value]="custDetails.customerId"
+            disabled
+            placeholder="Enter Customer ID"
+          />
+        </div>
+      </div>
+      <div class="row justify-content-center mt-3">
+        <div class="col-md-6 col-sm-6 mr-auto ml-auto">
+          <label for="staticEmail" class="col-sm-6 col-form-label">Name</label>
+        </div>
+        <div class="col-md-6 col-sm-6 mr-auto ml-auto">
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            [(ngModel)]="custDetails.name"
+            placeholder="Enter Customer Name"
+          />
+        </div>
+      </div>
+      <div class="row justify-content-center mt-3">
+        <div class="col-md-6 col-sm-6 mr-auto ml-auto">
+          <label for="staticEmail" class="col-sm-6 col-form-label"
+            >Address</label
+          >
+        </div>
+        <div class="col-md-6 col-sm-6 mr-auto ml-auto">
+          <textarea
+            type="text"
+            class="form-control"
+            id="address"
+            rows="5"
+            [(ngModel)]="custDetails.address"
+            placeholder="Enter Address"
+          ></textarea>
+        </div>
+      </div>
+
+      <div class="row justify-content-center mt-3">
+        <div class="col-md-5 col-sm-5 mr-auto ml-auto">
+          <button
+            type="submit"
+            class="btn btn-dark mb-2"
+            (click)="updateCustomer()"
+          >
+            Update
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

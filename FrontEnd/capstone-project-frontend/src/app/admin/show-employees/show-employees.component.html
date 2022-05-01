@@ -1,0 +1,57 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="row justify-content-center">
+  <div class="card col-md-9 col-sm-9 mt-5 mr-auto ml-auto border-0">
+    <div class="card-body">
+      <button type="button" class="btn btn-dark" (click)="addEmployee()">
+        Add New Employee
+      </button>
+      <div class="row justify-content-center">
+        <div class="col-md-9 col-sm-9 mr-auto ml-auto">
+          <table class="table table-striped">
+            <thead>
+              <tr style="text-align: center">
+                <th scope="col">EmpId</th>
+                <th scope="col">Employee Name</th>
+                <th scope="col">BranchCode</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                style="text-align: center"
+                *ngFor="let employee of allEmployees"
+              >
+                <td>{{ employee.empId }}</td>
+                <td>{{ employee.name }}</td>
+                <td>{{ employee.branchCode }}</td>
+                <td>
+                  <div class="row">
+                    <div class="col-md-3 col-sm-3">
+                      <button
+                        type="button"
+                        class="btn btn-dark"
+                        (click)="editEmployee(employee.empId)"
+                      >
+                        Edit
+                      </button>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                      <button
+                        type="button"
+                        class="btn btn-dark"
+                        (click)="removeEmployee(employee.empId)"
+                      >
+                        Remove
+                      </button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

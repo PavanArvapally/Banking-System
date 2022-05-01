@@ -1,0 +1,112 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" routerLink="/employee/index">Employee Portal</a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Profile</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="row justify-content-center">
+  <div class="card col-md-4 col-sm-4 mt-5 mr-auto ml-auto border-0">
+    <div class="card-body">
+      <div class="row justify-content-center mt-3">
+        <div class="col-md-6 col-sm-6 mr-auto ml-auto">
+          <label for="staticEmail" class="col-sm-6 col-form-label"
+            >Acc No</label
+          >
+        </div>
+        <div class="col-md-6 col-sm-6 mr-auto ml-auto">
+          <input
+            type="text"
+            class="form-control"
+            id="accNo"
+            [(ngModel)]="newBankAccount.accountNo"
+            placeholder="Enter Account No"
+          />
+        </div>
+      </div>
+      <div class="row justify-content-center mt-3">
+        <div class="col-md-6 col-sm-6 mr-auto ml-auto">
+          <label for="staticEmail" class="col-sm-6 col-form-label"
+            >Customer</label
+          >
+        </div>
+        <div class="col-md-6 col-sm-6 mr-auto ml-auto">
+          <input
+            type="text"
+            class="form-control"
+            id="accNo"
+            [(ngModel)]="newBankAccount.customerId"
+            placeholder="Enter Customer ID"
+          />
+        </div>
+      </div>
+      <div class="row justify-content-center mt-3">
+        <div class="col-md-6 col-sm-6 mr-auto ml-auto">
+          <label for="staticEmail" class="col-sm-6 col-form-label"
+            >Branch</label
+          >
+        </div>
+        <div class="col-md-6 col-sm-6 mr-auto ml-auto">
+          <input
+            type="text"
+            class="form-control"
+            id="accNo"
+            [(ngModel)]="newBankAccount.branchCode"
+            disabled
+            placeholder="Enter branch Code"
+          />
+        </div>
+      </div>
+
+      <div class="row justify-content-center mt-3">
+        <div class="col-md-6 col-sm-6 mr-auto ml-auto">
+          <label for="staticEmail" class="col-sm-6 col-form-label">Type</label>
+        </div>
+        <div class="col-md-6 col-sm-6 mr-auto ml-auto">
+          <input
+            type="text"
+            class="form-control"
+            id="accNo"
+            [(ngModel)]="newBankAccount.type"
+            placeholder="Enter Type(savings or current)"
+          />
+        </div>
+      </div>
+
+      <div class="row justify-content-center mt-3">
+        <div class="col-md-6 col-sm-6 mr-auto ml-auto">
+          <label for="staticEmail" class="col-sm-6 col-form-label"
+            >Balance</label
+          >
+        </div>
+        <div class="col-md-6 col-sm-6 mr-auto ml-auto">
+          <input
+            type="text"
+            class="form-control"
+            id="accNo"
+            [(ngModel)]="newBankAccount.accBalance"
+            placeholder="Enter Balance"
+          />
+        </div>
+      </div>
+      <div class="row justify-content-center mt-3">
+        <div class="col-md-5 col-sm-5 mr-auto ml-auto">
+          <button
+            type="submit"
+            class="btn btn-dark mb-2"
+            (click)="addNewBankAccount()"
+          >
+            Create
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

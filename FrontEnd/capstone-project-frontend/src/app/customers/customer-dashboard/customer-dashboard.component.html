@@ -1,0 +1,65 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">Customer Portal</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/customer/{{ customerId }}/profile"
+          >Profile</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="row justify-content-center">
+  <div class="card col-md-4 col-sm-4 mt-5 mr-auto ml-auto border-0">
+    <div class="card-body">
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-sm-6 mr-auto ml-auto">
+          <button
+            type="button"
+            class="btn btn-primary btn-lg"
+            (click)="redirectTo('transactions')"
+          >
+            Transactions
+          </button>
+        </div>
+        <div class="col-md-6 col-sm-6 mr-auto ml-auto">
+          <button
+            type="button"
+            class="btn btn-success btn-lg"
+            (click)="redirectTo('deposit')"
+          >
+            Deposit
+          </button>
+        </div>
+      </div>
+      <div class="row justify-content-center mt-5">
+        <div class="col-md-6 col-sm-6 mr-auto ml-auto">
+          <button
+            type="button"
+            class="btn btn-secondary btn-lg"
+            (click)="redirectTo('withdraw')"
+          >
+            Withdraw
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

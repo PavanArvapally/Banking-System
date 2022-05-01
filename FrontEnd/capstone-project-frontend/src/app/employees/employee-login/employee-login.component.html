@@ -1,0 +1,59 @@
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" routerLink="/employee/index">Employee Portal</a>
+
+  <div class="collapse navbar-collapse" id="navbarText"></div>
+</nav>
+
+<div class="row justify-content-center">
+  <div class="card col-md-4 col-sm-4 mt-5 mr-auto ml-auto border-0">
+    <div class="card-body">
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-sm-6 mr-auto ml-auto">
+          <label for="staticEmail" class="col-sm-6 col-form-label"
+            >Select Bank</label
+          >
+        </div>
+        <div class="col-md-6 col-sm-6 mr-auto ml-auto">
+          <select class="form-control">
+            <option selected>KKBK</option>
+          </select>
+        </div>
+      </div>
+      <div class="row justify-content-center mt-3">
+        <div class="col-md-6 col-sm-6 mr-auto ml-auto">
+          <label for="staticEmail" class="col-sm-6 col-form-label"
+            >Select Branch</label
+          >
+        </div>
+        <div class="col-md-6 col-sm-6 mr-auto ml-auto">
+          <select class="form-control">
+            <option selected>HDFC0000148</option>
+          </select>
+        </div>
+      </div>
+      <div class="row justify-content-center mt-3">
+        <div class="col-md-6 col-sm-6 mr-auto ml-auto">
+          <label for="staticEmail" class="col-sm-6 col-form-label"
+            >Employee Id</label
+          >
+        </div>
+        <div class="col-md-6 col-sm-6 mr-auto ml-auto">
+          <input
+            type="number"
+            class="form-control"
+            id="inputPassword"
+            [(ngModel)]="empId"
+            placeholder="Enter Employee ID"
+          />
+        </div>
+      </div>
+      <div class="row justify-content-center mt-3">
+        <div class="col-md-5 col-sm-5 mr-auto ml-auto">
+          <button type="submit" class="btn btn-dark mb-2" (click)="login()">
+            Login
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

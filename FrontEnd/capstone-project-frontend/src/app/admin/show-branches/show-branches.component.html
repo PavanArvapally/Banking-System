@@ -1,0 +1,60 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="row justify-content-center">
+  <div class="card col-md-9 col-sm-9 mt-5 mr-auto ml-auto border-0">
+    <div class="card-body">
+      <button type="button" class="btn btn-dark" (click)="addNewBranch()">
+        Add New Branch
+      </button>
+      <div class="row justify-content-center">
+        <div class="col-md-9 col-sm-9 mr-auto ml-auto">
+          <table class="table table-striped">
+            <thead>
+              <tr style="text-align: center">
+                <th scope="col">BranchCode</th>
+                <th scope="col">Address</th>
+                <th scope="col">Manager</th>
+                <th scope="col">HeadOffice</th>
+                <th scope="col">BankCode</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let branch of allBranches" style="text-align: center">
+                <td>{{ branch.branchCode }}</td>
+                <td>{{ branch.address }}</td>
+                <td>{{ branch.manager }}</td>
+                <td *ngIf="branch.headOffice == 1">yes</td>
+                <td *ngIf="branch.headOffice == 0">no</td>
+                <td>{{ branch.bankCode }}</td>
+                <td>
+                  <div class="row">
+                    <div class="col-md-1 col-sm-1">
+                      <button
+                        type="button"
+                        class="btn btn-dark"
+                        (click)="editBranch(branch.branchCode)"
+                      >
+                        Edit
+                      </button>
+                      <br />
+                    </div>
+                    <!-- <div class="col-md-1 col-sm-1">
+                      <button
+                        type="button"
+                        class="btn btn-dark"
+                        (click)="deleteBranch(branch.branchCode)"
+                      >
+                        Remove
+                      </button>
+                    </div> -->
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,100 @@
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Admin Portal</a>
+
+  <div class="collapse navbar-collapse" id="navbarText"></div>
+</nav>
+
+<div class="row justify-content-center">
+  <div class="card col-md-4 col-sm-4 mt-5 mr-auto ml-auto border-0">
+    <div class="card-body">
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-sm-6 mr-auto ml-auto">
+          <label for="staticEmail" class="col-sm-6 col-form-label"
+            >Branch Code</label
+          >
+        </div>
+        <div class="col-md-6 col-sm-6 mr-auto ml-auto">
+          <input
+            type="text"
+            class="form-control"
+            id="branchCode"
+            placeholder="Enter BranchCode"
+            [(ngModel)]="branchDetails.branchCode"
+          />
+        </div>
+      </div>
+      <div class="row justify-content-center mt-3">
+        <div class="col-md-6 col-sm-6 mr-auto ml-auto">
+          <label for="staticEmail" class="col-sm-6 col-form-label"
+            >Address</label
+          >
+        </div>
+        <div class="col-md-6 col-sm-6 mr-auto ml-auto">
+          <textarea
+            type="text"
+            class="form-control"
+            id="address"
+            [(ngModel)]="branchDetails.address"
+            style="width: 300px"
+            placeholder="Enter Address"
+          ></textarea>
+        </div>
+      </div>
+      <div class="row justify-content-center mt-3">
+        <div class="col-md-6 col-sm-6 mr-auto ml-auto">
+          <label for="staticEmail" class="col-sm-6 col-form-label"
+            >Manager</label
+          >
+        </div>
+        <div class="col-md-6 col-sm-6 mr-auto ml-auto">
+          <input
+            type="text"
+            class="form-control"
+            id="manager"
+            [(ngModel)]="branchDetails.manager"
+            placeholder="Enter Manager Name"
+          />
+        </div>
+      </div>
+      <div class="row justify-content-center mt-3">
+        <div class="col-md-6 col-sm-6 mr-auto ml-auto">
+          <label for="staticEmail" class="col-sm-6 col-form-label"
+            >Head Office</label
+          >
+        </div>
+        <div class="col-md-6 col-sm-6 mr-auto ml-auto">
+          <input
+            type="text"
+            class="form-control"
+            id="headOffice"
+            [(ngModel)]="branchDetails.headOffice"
+            placeholder="Enter Head Office"
+          />
+        </div>
+      </div>
+      <div class="row justify-content-center mt-3">
+        <div class="col-md-6 col-sm-6 mr-auto ml-auto">
+          <label for="staticEmail" class="col-sm-6 col-form-label"
+            >BankCode</label
+          >
+        </div>
+        <div class="col-md-6 col-sm-6 mr-auto ml-auto">
+          <input
+            type="text"
+            class="form-control"
+            id="bankCode"
+            [(ngModel)]="branchDetails.bankCode"
+            placeholder="Enter Bank Code"
+          />
+        </div>
+      </div>
+      <div class="row justify-content-center mt-3">
+        <div class="col-md-5 col-sm-5 mr-auto ml-auto">
+          <button type="submit" class="btn btn-dark mb-2" (click)="add()">
+            Update
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
